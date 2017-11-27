@@ -1,0 +1,132 @@
+.clock{
+	width: 500px;
+	height: 500px;
+	border:2px solid black;
+	margin: 70px auto;
+	border-radius: 100%;
+	position: relative;
+	background-color: white;
+	box-shadow: 0px 0px 40px rgba(0,0,0,.50);
+}
+
+/*digits piece*/
+.clock span{
+	font-size: 25px;
+	position: absolute;
+}
+.clock span:nth-of-type(12){
+	top: 10px;
+	left: calc(50% - 10px);
+}
+.clock span:nth-of-type(3){
+	top: calc(50% - 10px);
+	right: 10px;
+}
+.clock span:nth-of-type(6){
+	bottom: 10px;
+	right: calc(50% - 10px);
+}
+.clock span:nth-of-type(9){
+	bottom: calc(50% - 10px);
+	left: 10px;
+}
+.clock span:nth-of-type(1){
+	top: 50px;
+	right: 120px;
+}
+.clock span:nth-of-type(2){
+	top: 130px;
+	right: 50px;
+}
+.clock span:nth-of-type(4){
+	bottom: 130px;
+	right: 50px;
+}
+.clock span:nth-of-type(5){
+	bottom: 50px;
+	right: 120px;
+}
+.clock span:nth-of-type(11){
+	top: 50px;
+	left: 120px;
+}
+.clock span:nth-of-type(10){
+	top: 130px;
+	left: 50px;
+}
+.clock span:nth-of-type(8){
+	bottom: 130px;
+	left: 50px;
+}
+.clock span:nth-of-type(7){
+	bottom: 50px;
+	left: 120px;
+}
+
+/*second sign piece*/
+
+.clock .second{
+	width: 100%;
+	position: absolute;
+	left: 0px;
+	top: 250px;
+}
+.clock .second div:nth-child(1){
+	width: 50%;
+	border:2px solid transparent;	
+	float: right;
+}
+.clock .second div:nth-child(2){
+	width: 45%;
+	border:2px solid black;	
+	float: right;
+}
+.clock .center{
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	top: calc(50% - 25px);
+	left: calc(50% - 25px);
+	background-color: black;
+	border-radius: 100%;
+}
+
+/*minut sign piece*/
+
+.clock .minut{
+	width: 100%;
+	position: absolute;
+	left: 0px;
+	top: 250px;
+}
+.clock .minut div:nth-child(1){
+	width: 50%;
+	border:2px solid transparent;	
+	float: right;
+}
+.clock .minut div:nth-child(2){
+	width: 35%;
+	border:4px solid black;	
+	float: right;
+}
+
+
+/*hour sign piece*/
+
+.clock .hour{
+	width: 100%;
+	position: absolute;
+	left: 0px;
+	top: 250px;
+}
+.clock .hour div:nth-child(1){
+	width: 50%;
+	border:2px solid transparent;	
+	float: right;
+}
+.clock .hour div:nth-child(2){
+	width: 30%;
+	border:6px solid black;	
+	float: right;
+}
+ 
