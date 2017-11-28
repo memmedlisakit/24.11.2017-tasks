@@ -48,12 +48,12 @@ function timeMinut(){
 timeMinut();
 window.setInterval(timeMinut, 1000);
 
-var count = minut.getMinutes()/30;
+var count = minut.getMinutes()/2;
 
 function timeHour(){
-	count+=2;
+	count+=0.5;
 	if(count >= 60){
-		count = minut.getMinutes()/30;
+		count = minut.getMinutes()/2;
 	}
 	console.log(count);
 	var hourSign = document.querySelector(".hour");
