@@ -27,7 +27,7 @@ clock();
  	var secondSign = document.querySelector(".second");
  	var second = new Date(); 	
  	var deg = second.getSeconds()*6;
- 	console.log(deg);
+ 	// console.log(deg);
  	secondSign.style.transform ="rotate("+deg+"deg)";
 };
 timeSecond();
@@ -36,27 +36,34 @@ window.setInterval(timeSecond, 1000);
 
 
  
-
+var minut;
 function timeMinut(){
 	var minutSign = document.querySelector(".minut");
-	var minut = new Date();
+	minut = new Date();
 	var deg = minut.getMinutes()*6;
-
+	console.log(minut.getMinutes())
 	minutSign.style.transform ="rotate("+deg+"deg)";
 }
 
 timeMinut();
 window.setInterval(timeMinut, 1000);
 
-
+var count = minut.getMinutes()/30;
 
 function timeHour(){
+	count+=2;
+	if(count >= 60){
+		count = minut.getMinutes()/30;
+	}
+	console.log(count);
 	var hourSign = document.querySelector(".hour");
 	var hour = new Date();
-	var deg = ((hour.getHours()%12+1)/12*360)+2;
+	var deg = ((hour.getHours()%12+1)/12*360)+count;
 	hourSign.style.transform ="rotate("+deg+"deg)";
-	console.log(hour.getHours());
+	// console.log(hour.getHours());
+	
+	console.log(count);
 }
 
 timeHour();
-window.setInterval(timeHour, 1000);
+window.setInterval(timeHour, 60000);
