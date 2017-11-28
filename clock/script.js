@@ -53,7 +53,7 @@ window.setInterval(timeMinut, 1000);
 function timeHour(){
 	var hourSign = document.querySelector(".hour");
 	var hour = new Date();
-	var deg = (hour.getHours()%12+1)/12*360;
+	var deg = ((hour.getHours()%12+1)/12*360)+2;
 	hourSign.style.transform ="rotate("+deg+"deg)";
 	console.log(hour.getHours());
 }
