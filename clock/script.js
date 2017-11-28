@@ -26,7 +26,8 @@ clock();
  function timeSecond(){
  	var secondSign = document.querySelector(".second");
  	var second = new Date(); 	
- 	var deg = second.getSeconds()*6+90;
+ 	var deg = second.getSeconds()*6;
+ 	console.log(deg);
  	secondSign.style.transform ="rotate("+deg+"deg)";
 };
 timeSecond();
@@ -34,12 +35,13 @@ window.setInterval(timeSecond, 1000);
 
 
 
-
+ 
 
 function timeMinut(){
 	var minutSign = document.querySelector(".minut");
 	var minut = new Date();
-	var deg = minut.getMinutes()*6+90;
+	var deg = minut.getMinutes()*6;
+
 	minutSign.style.transform ="rotate("+deg+"deg)";
 }
 
@@ -51,8 +53,9 @@ window.setInterval(timeMinut, 1000);
 function timeHour(){
 	var hourSign = document.querySelector(".hour");
 	var hour = new Date();
-	var deg = hour.getHours()*12+45;
+	var deg = (hour.getHours()%12+1)/12*360;
 	hourSign.style.transform ="rotate("+deg+"deg)";
+	console.log(hour.getHours());
 }
 
 timeHour();
